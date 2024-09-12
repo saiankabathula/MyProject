@@ -1,0 +1,143 @@
+<!-- desc portfolioproject1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USERNAME                                  NOT NULL VARCHAR2(30)
+ PASSWORD                                  NOT NULL VARCHAR2(15)
+ HINTQUESTION                              NOT NULL VARCHAR2(50)
+ HINTANSWER                                NOT NULL VARCHAR2(30) -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+}
+
+.login-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.textbox {
+    margin-bottom: 15px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #3498db;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn.sign-in {
+    background: #3498db;
+    color: #fff;
+}
+
+.btn.sign-in:hover {
+    background: #2980b9;
+}
+
+.btn.cancel {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn.cancel:hover {
+    background: #c0392b;
+}
+
+.links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.forgot-password {
+    font-size: 14px;
+}
+
+.create-account {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login Page</h2>
+            <form action="dologin" method="post">
+                <div class="textbox">
+                    <input type="text" name="loginusername" maxlength="30" placeholder="Enter Username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password"  name="loginpassword" maxlength="15" placeholder="Enter Password" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn sign-in">Sign In</button>
+                    <button type="reset" class="btn cancel">Cancel</button>
+                </div>
+                <div class="links">
+                    <a href="forgotform.html">Forgot Password?</a>
+                    <a href="createAccount.html">Create New Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

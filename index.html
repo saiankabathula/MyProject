@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c31455913.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="z-photos/NameLogo.png" class="logo">
+            <ul id="phonemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Java Full Stack Developer</p>
+            <h1>Hi, I'm <span>Sai Ankabathula</span><br> From Rajahmundry</h1>
+        </div>
+    </div>
+</div>
+<!-- ************************ About *************************** -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="z-photos/user.jpg" class="user">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am Sai Ankabathula from Rajahmundry. I am a Fresher(2023) coming to my education qualification I am completed my graduation in the stream of computer science engineering in Kakinada Institute Of Technological Science college. and I completed my intermediate in APTWR junior college and SSC at APTWR School. coming to my technical skills I have a good knowledge in java. My strength is I am a quick learner, I accept my mistakes and I will learn from them. My weakness is I cannot do multitasking at a time. My short-term goal is to gain more practical knowledge in java. My long-term goal is in coming years I want to see myself in a good position. My hobbies are Travelling and play outdoor games.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>java</span><br>Java is used for developing desktop applications,<br> system software and server applications.</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <!-- <li><span>Web Development</span><br>Web app Development</li> -->
+                        <li><span>20th Jun,2024 - 25th July,2024</span><br>Internship at Internship Studio</li>
+                        <li><span>Sep-2023 - Mar-2024</span><br>Java Training at Apec Institute</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019 - 2023</span><br>B.tech from Kits College(Andhra Pradesh)</li>
+                        <li><span>2017 - 2019</span><br>Intermediate from A.P.T.W.R JR College(Rampachodavaram)</li>
+                        <li><span>2016 - 2017</span><br>SSC from A.P.T.W.R.School(Addateegala)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ************************ Projects *************************** -->
+<section id="projects">
+    <h2 class="sub-title">My Projects</h2>
+    <div class="project-grid">
+        <div class="project-item">
+            <form class="project" action="loginpage.html" method="post">
+                <img src="z-photos/project-1.jpg" alt="Project 1">
+                <h3>User Management System</h3>
+                <p>Develop a web-based user management system that includes user sign-up, password recovery, and hint question functionality. The system will use MySQL for database management and Java Servlets for server-side logic.</p>
+                <button type="submit" class="btn btn-primary">View</button>
+            </form>
+        </div>
+        <div class="project-item">
+            <form class="project" action="orderproject.html" method="post">
+                <img src="z-photos/billing-project-2.jpg" alt="Project 2">
+                <h3>Food Items Billing System</h3>
+                <p>Develop a desktop application for managing and processing food item billing. The system will allow users to select food items, calculate total prices, and generate bills. It will be implemented using Core Java, standard Java libraries for business logic and data management.</p>
+                <button type="submit" class="btn btn-primary">View</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- ************************ Contact *************************** -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>saiankabathula@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i>6301842933</p>               
+                <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/saiankabathula-433b02298"><i class="fa-brands fa-linkedin"></i></a>
+                <!-- <a href=""><i class="fa-solid fa-envelope"></i></a> -->
+                </div>
+                <a href="z-photos/Ankabathula_Sai_new.pdf" class="btn btn2" download>Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet" method="post">
+                    <input type="text" name="Name" placeholder="Your Name..." required>
+                    <input type="email" name="Email" placeholder="Your Email Id..." required>
+                    <textarea name="Message" rows="5" placeholder="Your Message..."></textarea>
+                    <span id="msg"></span>
+                    <span id="msg2"></span>
+                    <button type="submit" class="btn btn2 btn3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ************************ Footer *************************** -->
+<footer class="portfolio-footer">
+    <p>&copy; 2024 Sai Ankabathula. All rights reserved.</p>
+    <p>Call Me: <a href="callto:6301842933">6301842933</a></p>
+    <p>Send Me Mail: <a href="mailto:saiankabathula@gmail.com">saiankabathula@gmail.com</a></p>
+</footer>  
+<script>
+    var menu=document.getElementById("phonemenu");
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    function openmenu(){
+        menu.style.right = "0";
+    }
+    function closemenu(){
+        menu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwEXQ5VN9fzj4mfnYd9Ft3EY6skrSKdUdyd6Iq7D5mJeoTj4esJnZ9dQ2dL8V5ArpRjIA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    const msg2 = document.getElementById("msg2")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML ="" 
+            },5000)
+            form.reset()
+        })
+        .catch(error => {
+            msg2.innerHTML = "Message Not Sent..."
+            setTimeout(function(){msg2.innerHTML= ""},5000)
+            form.reset()
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<web-app>
+
+	<!-- *** Project-1 ***  -->
+
+	<!-- loginpage.html to LoginPageServlet.class  -->
+  	<servlet>
+     		<servlet-name>login</servlet-name>
+     		<servlet-class>LoginPageServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+     		<servlet-name>login</servlet-name>
+     		<url-pattern>/dologin</url-pattern>
+  	</servlet-mapping>
+
+        <!-- createAccount.html to CreateAccountServlet.class  -->
+  	<servlet>
+     		<servlet-name>newaccount</servlet-name>
+     		<servlet-class>CreateAccountServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+     		<servlet-name>newaccount</servlet-name>
+     		<url-pattern>/create</url-pattern>
+  	</servlet-mapping>
+
+	<!-- changepassword.html to ChangePasswordServlet.class  -->
+  	<servlet>
+     		<servlet-name>change</servlet-name>
+     		<servlet-class>ChangePasswordServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+     		<servlet-name>change</servlet-name>
+     		<url-pattern>/dochpwd</url-pattern>
+  	</servlet-mapping>
+
+	<!-- forgotform.html to ForgotPasswordServlet.class  -->
+  	<servlet>
+     		<servlet-name>test</servlet-name>
+     		<servlet-class>ForgotPasswordServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+     		<servlet-name>test</servlet-name>
+     		<url-pattern>/forgetserv</url-pattern>
+  	</servlet-mapping>
+
+	
+	<!-- *** Project-2 ***  -->
+
+	<!-- orderproject.html to OrderServlet.class  -->
+  	<servlet>
+     		<servlet-name>billproject</servlet-name>
+     		<servlet-class>OrderServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+     		<servlet-name>billproject</servlet-name>
+     		<url-pattern>/orderservlet</url-pattern>
+  	</servlet-mapping>
+</web-app>

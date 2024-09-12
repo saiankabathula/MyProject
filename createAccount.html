@@ -1,0 +1,152 @@
+<!-- desc portfolioproject1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USERNAME                                  NOT NULL VARCHAR2(30)
+ PASSWORD                                  NOT NULL VARCHAR2(15)
+ HINTQUESTION                              NOT NULL VARCHAR2(50)
+ HINTANSWER                                NOT NULL VARCHAR2(30) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+.register-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.textbox {
+    margin-bottom: 15px;
+}
+
+.textbox input,
+.textbox select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.textbox select {
+    background: #f9f9f9;
+    cursor: pointer;
+}
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn.create {
+    background: #27ae60;
+    color: #fff;
+}
+
+.btn.create:hover {
+    background: #2ecc71;
+}
+
+.btn.cancel {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn.cancel:hover {
+    background: #c0392b;
+}
+
+.links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.links a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+    </style>
+
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Create Account</h2>
+            <form name="f1"  action="create" method="post">
+                <div class="textbox">
+                    <input type="text" name="signUpUsername" placeholder="Username" maxlength="30" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" name="signUpPassword" placeholder="Password" maxlength="15" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" name="signUpConfirmPassword" placeholder="Confirm Password" maxlength="15" required>
+                </div>
+                <div class="textbox">
+                    <select  name="signUpFormHintQuestion" required>
+                        <option disabled selected>Select Security Question</option>
+                        <option value="What was the name of your first pet?">What was the name of your first pet?</option>
+                        <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
+                        <option value="What city were you born in?">What city were you born in?</option>
+                    </select>
+                </div>
+                <div class="textbox">
+                    <input type="text" name="signUpFormHintAnswer" maxlength="30" placeholder="Answer" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn">Create Account</button>
+                    <button type="reset" class="btn cancel">Cancel</button>
+                </div>
+                <div class="links">
+                    <a href="loginpage.html">Already have an account? Sign In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

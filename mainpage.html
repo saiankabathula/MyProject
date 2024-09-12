@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; background: linear-gradient(135deg, #f06, #ff9); color: #fff;">
+
+    <!-- Main Title -->
+    <div style="text-align: center; margin: 20px;">
+        <h1 style="color: #fff; font-size: 32px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); margin: 0;">
+            User Management System
+        </h1>
+    </div>
+
+    <!-- Image -->
+    <div style="text-align: center; margin: 20px;">
+        <img src="" alt="project image" style="max-width: 30%; height: auto; border: 4px solid #fff; border-radius: 12px; transition: transform 0.5s ease; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);">
+    </div>
+
+    <!-- Project Details Section -->
+    <div id="project-details" class="fade-in" style="margin: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 12px; background-color: #333; text-align: left; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); opacity: 0; transition: opacity 1s ease-in-out;">
+        <h2 style="color: #ffeb3b; font-size: 28px; margin: 0; text-align: center; transition: color 0.5s ease;">
+            PROJECT - { User Management System }
+        </h2>
+        <p style="font-size: 18px; color: #ddd; margin: 10px 0; transition: color 0.5s ease;">
+            <strong>Project Overview:</strong> User Management System
+        </p>
+        
+        <p style="font-size: 18px; color: #ddd; margin: 10px 0; transition: color 0.5s ease;">
+            <strong>Objective:</strong> 
+            Develop a web-based user management system that includes user sign-up, password recovery, and hint question functionality. The system will use MySQL for database management and Java Servlets for server-side logic.
+        </p>
+
+        <h3 style="color: #ffeb3b; font-size: 24px; font-weight: bold; margin: 20px 0; border-bottom: 2px solid #ffeb3b;">
+            Features:
+        </h3>
+        <ul style="list-style-type: none; padding: 0; font-size: 18px; color: #ddd;">
+            <li>
+                <strong>User Registration (Sign-Up):</strong>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Form:</strong> Users provide details such as username, password, and a hint question with an answer during registration.</li>
+                    <li><strong>Validation:</strong> Ensure that the username are unique and that the password meets security criteria.</li>
+                    <li><strong>Storage:</strong> Store user details in the MySQL database, including the hint question with its answer.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Password Recovery:</strong>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Request Password Reset:</strong> Users can request a password reset if they forget their password. They need to provide their username only.</li>
+                    <li><strong>Hint Question Verification:</strong> To ensure identity, the system verifies the user's hint question and answer.</li>
+                    <li><strong>Reset Password:</strong> After successful verification, allow the user to set a new password. Store the new password securely in the database.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Hint Question Management:</strong>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Set Hint Question:</strong> During registration, users can select or change their hint question and provide the answer.</li>
+                    <li><strong>Change Hint Question:</strong> Users can update their hint question and answer through their profile settings.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3 style="color: #ffeb3b; font-size: 24px; font-weight: bold; margin: 20px 0; border-bottom: 2px solid #ffeb3b;">
+            Components:
+        </h3>
+        <ul style="list-style-type: none; padding: 0; font-size: 18px; color: #ddd;">
+            <li>
+                <strong>Frontend:</strong>
+                <ul style="padding-left: 20px;">
+                    <li><strong>HTML/CSS/JavaScript:</strong> New user registration, login, forgot password, and profile management pages. Include forms for user input and validation scripts.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Backend:</strong>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Java Servlets:</strong> Handle HTTP requests for user registration, password recovery, and hint question management. Process form submissions and perform necessary operations.</li>
+                    <li><strong>Business Logic:</strong>Implement logic for validating user input, interacting with the database, and handling security concerns.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Database:</strong>
+                <ul style="padding-left: 20px;">
+                    <li><strong>MySQL:</strong> Stores user information such as ID, username, password, hint question, and hint answer.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3 style="color: #ffeb3b; font-size: 24px; font-weight: bold; margin: 20px 0; border-bottom: 2px solid #ffeb3b;">
+            Workflow:
+        </h3>
+        <ul style="list-style-type: none; padding: 0; font-size: 18px; color: #ddd;">
+            <li>
+                <strong>User Registration:</strong>
+                Users complete a registration form with their details and hint question. The servlet processes the form, validates inputs, hashes the password, and stores the data in the users table.
+            </li>
+            <li>
+                <strong>Password Recovery:</strong>
+                Users request a password reset by providing hint question and prompts the user to answer it. If the answer is correct, the user is allowed to set a new password, which is hashed and updated in the database.
+            </li>
+            <li>
+                <strong>Hint Question Management:</strong>
+                During registration, users select and answer a hint question. Users can update their hint question and answer from their profile settings. The servlet handles these updates and ensures the new information is securely stored.
+            </li>
+        </ul>
+
+        <h3 style="color: #ffeb3b; font-size: 24px; font-weight: bold; margin: 20px 0; border-bottom: 2px solid #ffeb3b;">
+            Security Considerations:
+        </h3>
+        <ul style="list-style-type: none; padding: 0; font-size: 18px; color: #ddd;">
+            <li><strong>Input Validation:</strong> Validate user inputs both on the client side and server side to ensure data integrity.</li>
+        </ul>
+
+        <h3 style="color: #ffeb3b; font-size: 24px; font-weight: bold; margin: 20px 0; border-bottom: 2px solid #ffeb3b;">
+            Technologies Used:
+        </h3>
+        <ul style="list-style-type: none; padding: 0; font-size: 18px; color: #ddd;">
+            <li><strong>Java Servlets:</strong> For managing HTTP requests and server-side processing.</li>
+            <li><strong>MySQL:</strong> For storing user data and managing authentication details.</li>
+            <li><strong>JDBC:</strong> For database connectivity and operations.</li>
+            <li><strong>HTML/CSS/JavaScript:</strong> For building the user interface and client-side interactions.</li>
+        </ul>
+    </div>
+
+    <!-- Image -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 90px; margin: 30px;">
+        <div>
+            <img src="z-photos/Mainpage_IMG-2.jpg" alt="Image 1" style="width: 100%; height: auto; border: 2px solid #ccc;">
+        </div>
+        <div>
+            <img src="z-photos/Mainpage_IMG-1.webp" alt="Image 2" style="width: 66%; height: auto; border: 2px solid #ccc;">
+        </div>
+    </div>
+    
+    <!-- Buttons Section -->
+    <div style="text-align: center; margin: 20px;">
+        <!-- Change Password Button -->
+        <a href="changepassword.html">
+            <button style="padding: 15px 25px; font-size: 18px; color: #fff; background-color: #007bff; border: none; border-radius: 8px; cursor: pointer; margin-right: 15px; transition: background-color 0.3s ease, transform 0.3s ease;">
+                Change Password
+            </button>
+        </a>
+        <!-- Logout Button -->
+        <a href="loginpage.html">
+            <button style="padding: 15px 25px; font-size: 18px; color: #fff; background-color: #28a745; border: none; border-radius: 8px; cursor: pointer; margin-right: 15px; transition: background-color 0.3s ease, transform 0.3s ease;">
+                Logout
+            </button>
+        </a>
+        <!-- Go to Index Page Button (Link Styled as a Button) -->
+        <a href="index.html" style="display: inline-block; padding: 15px 30px; background-color: #f1f918; color: white; text-align: center; text-decoration: none; font-size: 16px; cursor: pointer; border-radius: 8px; transition: background-color 0.3s ease, transform 0.3s ease;">
+            Go to Profile Page
+        </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 20px; background-color: #222; color: #fff; border-top: 1px solid #444;">
+        <p style="margin: 0;">Contact us:</p>
+        <p style="margin: 5px 0;">
+            <a href="tel:6301842933" style="color: #00bfff; text-decoration: none; transition: color 0.3s ease;">Call Us: 6301842933</a>
+        </p>
+        <p style="margin: 5px 0;">
+            <a href="mailto:saiankabathula@gmail.com" style="color: #00bfff; text-decoration: none; transition: color 0.3s ease;">Email Us: saiankabathula@gmail.com</a>
+        </p>
+    </footer>
+    
+    <script>
+        // JavaScript to add "visible" class to trigger fade-in effect
+        window.addEventListener('load', function() {
+            document.getElementById('project-details').style.opacity = '1';
+        });
+
+        // Adjust styles based on window size
+        function adjustStyles() {
+            const width = window.innerWidth;
+            const projectDetails = document.getElementById('project-details');
+            if (width <= 600) {
+                projectDetails.style.margin = '10px';
+                projectDetails.style.padding = '10px';
+                projectDetails.style.fontSize = '14px';
+            } else {
+                projectDetails.style.margin = '20px';
+                projectDetails.style.padding = '20px';
+                projectDetails.style.fontSize = '18px';
+            }
+        }
+        // Initial style adjustment
+        window.addEventListener('resize', adjustStyles);
+        adjustStyles();
+    </script>
+</body>
+</html>
+
